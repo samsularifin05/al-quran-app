@@ -14,8 +14,13 @@ const KonfirmasiPassword = () => {
           <h1 className="text-[24px]">Konfirmasi Password</h1>
           <p className="w-[19rem] text-[14px] text-color3">Silahkan Input Password Baru</p>
           <div className="mt-5 flex flex-col gap-3">
-            <FloatingLabelInput type="text" password icon={EyeClose} label={"Password Lama"} />
             <FloatingLabelInput type="text" password icon={EyeClose} label={"Password Baru"} />
+            <FloatingLabelInput
+              type="text"
+              password
+              icon={EyeClose}
+              label={"Konfirmasi Password"}
+            />
           </div>
 
           <Link
