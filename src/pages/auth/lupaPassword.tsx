@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Mail } from "../../assets";
 import { FloatingLabelInput } from "../../components";
 import IntroComponent from "./component/IntroComponent";
+import InputOtpComponent from "./component/inputOtp";
+import { Link } from "react-router-dom";
 
 const LupaPassword = () => {
   const [otp, setotp] = useState(false);
@@ -31,6 +33,8 @@ const LupaPassword = () => {
     setSeconds(60);
   };
 
+  const [email, setemail] = useState("");
+
   const displayTime: string = `${Math.floor(seconds / 60)}:${seconds % 60 < 10 ? "0" : ""}${seconds % 60}`;
   return (
     <div className="flex h-screen flex-col lg:flex-row">
@@ -39,7 +43,7 @@ const LupaPassword = () => {
       <div className="flex w-screen items-center justify-center">
         <div className="flex flex-col gap-3">
           <h1 className="text-[24px]">{formOtp ? "Verifikasi Otp" : "Lupa Password"}</h1>
-          <p className="text-color3 w-[19rem] text-[14px]">
+          <p className="w-[19rem] text-[14px] text-color3">
             {formOtp ? "Masukan Kode OTP" : "Masukan Email Otp akan dikirim ke email."}
           </p>
           {!formOtp && (
@@ -47,35 +51,38 @@ const LupaPassword = () => {
               <FloatingLabelInput
                 icon={Mail}
                 label={"E-Mail"}
+                error={email !== "" ? false : true}
+                messageEror="Email Harus Diisi"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setemail(e.target.value)}
                 onClick={() => {
-                  setFormOtp(true);
-                  setotp(true);
+                  if (email !== "") {
+                    setFormOtp(true);
+                    setotp(true);
+                  }
                 }}
               />
             </div>
           )}
           {formOtp && (
-            <div className="w-full">
+            <div className="w-80">
               <div className="flex flex-row gap-2">
-                <FloatingLabelInput
-                  type="tel"
-                  placeholder="Masukan Kode Otp"
-                  postition="center"
-                  label={""}
-                />
+                <InputOtpComponent />
               </div>
-              <div className="bg-color1 mt-4 flex cursor-pointer items-center justify-between rounded p-2 px-4 text-white">
-                <div>Kirim Otp</div>
+              <Link
+                to="/konfirmasi-password"
+                className="mt-4 flex cursor-pointer items-center justify-between rounded bg-color1 p-2 px-4 text-white"
+              >
+                <div>Verifikasi Otp</div>
                 <img src={ArrowRight} className="h-5" />
-              </div>
-              <div className="text-color3 mt-3 flex justify-center gap-2 text-[12px]">
+              </Link>
+              <div className="mt-3 flex justify-center gap-2 text-[12px] text-color3">
                 <p>Tidak Menerima OTP? {seconds !== 0 && displayTime}</p>
                 {seconds === 0 && (
                   <p
                     onClick={() => {
                       handleResendOtp();
                     }}
-                    className="text-color4 cursor-pointer"
+                    className="cursor-pointer text-color4"
                   >
                     Kirim Ulang
                   </p>
