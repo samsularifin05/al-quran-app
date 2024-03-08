@@ -74,7 +74,14 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({
           {label}
         </label>
       </div>
-      {error && <p className="-mt-2 text-[10px] text-red-600">{messageEror}</p>}
+      {error && (
+        <p
+          className="-
+      mt-2 text-[10px] text-red-600"
+        >
+          {messageEror}
+        </p>
+      )}
     </>
   );
 };
