@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input.password-hide {
+  -webkit-text-security: disc;
+}
+@layer components {
+  .mobile-bg {
+    background-repeat: round;
+    height: 35vh;
+    width: 100vw;
+    background-image: url("./assets/image/BG Mobile.png");
+  }
+
+  .desktop-bg {
+    background-repeat: round;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./assets/image/BG.png");
+  }
+}
