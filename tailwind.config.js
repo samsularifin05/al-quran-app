@@ -20,9 +20,6 @@ export default {
         color1: "#828282",
         color2: "#32B7C5",
       },
-      screens: {
-        xs: 240,
-      },
     },
   },
   plugins: [],
