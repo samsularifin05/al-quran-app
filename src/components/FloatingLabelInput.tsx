@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Eye, EyeClose } from "../assets";
 
 interface FloatingLabelInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: string;
+  label?: string;
   icon?: string;
   inputRef?: any;
   password?: boolean;
@@ -74,14 +74,7 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({
           {label}
         </label>
       </div>
-      {error && (
-        <p
-          className="-
-      mt-2 text-[10px] text-red-600"
-        >
-          {messageEror}
-        </p>
-      )}
+      {error && <p className="-mt-2 text-[10px] text-red-600">{messageEror}</p>}
     </>
   );
 };

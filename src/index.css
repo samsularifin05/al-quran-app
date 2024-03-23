@@ -6,6 +6,9 @@ input.password-hide {
   -webkit-text-security: disc;
 }
 @layer components {
+  /* body {
+    background-color: #f2f2f2;
+  } */
   .mobile-bg {
     background-repeat: round;
     height: 35vh;
@@ -18,5 +21,25 @@ input.password-hide {
     height: 100vh;
     width: 100vw;
     background-image: url("./assets/image/BG.png");
+  }
+  .header-bg-desktop {
+    background-repeat: round;
+    width: 100vw;
+    height: 65vh;
+    top: -100px;
+    position: absolute;
+    background-image: url("./assets/image/bgHeader.png");
+  }
+
+  .wrapperButtonseringDibaca {
+    @apply flex w-20 items-center justify-center rounded-full bg-color5 p-1 text-[12px] text-color2;
+  }
+
+  .cardSurat {
+    @apply z-50 flex flex-wrap justify-center gap-6;
+  }
+
+  .cardItemSurat {
+    @apply flex h-20 w-72 rounded bg-white p-2 shadow;
   }
 }

@@ -7,7 +7,10 @@ export default {
         color1: "#32B7C5",
         color2: "#624BC3",
         color3: "#85E6C5",
-        color3: "#F2F2F2",
+        color4: "#F2F2F2",
+        color5: "#85E6C5",
+        color6: "#FBE09C",
+        color7: "#007B88",
       },
       textColor: {
         color1: "#0EFBEB",
@@ -19,6 +22,9 @@ export default {
       borderColor: {
         color1: "#828282",
         color2: "#32B7C5",
+      },
+      placeholderColor: {
+        color1: "#32B7C5",
       },
     },
   },

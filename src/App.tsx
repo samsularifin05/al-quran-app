@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { KonfirmasiPassword, Login, LupaPassword, Register } from "./pages";
+import { Home, KonfirmasiPassword, Login, LupaPassword, Register } from "./pages";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Route path="register" element={<Register />} />
       <Route path="lupa-password" element={<LupaPassword />} />
       <Route path="konfirmasi-password" element={<KonfirmasiPassword />} />
+      <Route path="home" element={<Home />} />
     </Routes>
   );
 }

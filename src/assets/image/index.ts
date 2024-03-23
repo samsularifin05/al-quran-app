@@ -10,11 +10,25 @@ import EyeClose from "./eyeClose.png";
 import User from "./user-circle.png";
 import BgMobile from "./BG Mobile.png";
 import SosmedBiru from "./sosmedBiru.png";
+import bgHeader from "./bgHeader.png";
+import iconSerch from "./search.png";
+import iconSurat from "./iconSurat.png";
+import iconJuz from "./iconJuz.png";
+import halaman from "./halaman.png";
+import sortBy from "./sortBy.png";
+import IconStartSurat from "./IconStartSurat.png";
 export {
   BG,
+  IconStartSurat,
+  iconSurat,
+  iconSerch,
   BgMobile,
+  halaman,
   SosmedBiru,
+  sortBy,
+  iconJuz,
   User,
+  bgHeader,
   Logo,
   SocialMedia,
   EyeClose,
