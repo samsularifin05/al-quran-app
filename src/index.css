@@ -5,6 +5,21 @@
 input.password-hide {
   -webkit-text-security: disc;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@font-face {
+  font-family: "lpmq";
+  src: url("./assets/font/lpmq.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 @layer components {
   /* body {
     background-color: #f2f2f2;
@@ -30,16 +45,24 @@ input.password-hide {
     position: absolute;
     background-image: url("./assets/image/bgHeader.png");
   }
+  .header-bg-mobile {
+    background-repeat: round;
+    /* width: 100vw; */
+    height: 80vh;
+    top: -100px;
+    position: absolute;
+    background-image: url("./assets/image/BG Mobile.png");
+  }
 
   .wrapperButtonseringDibaca {
-    @apply flex w-20 items-center justify-center rounded-full bg-color5 p-1 text-[12px] text-color2;
+    @apply flex h-8 w-20 items-center justify-center rounded-full bg-color5 px-5 py-1 text-[12px] text-color2;
   }
 
   .cardSurat {
-    @apply z-50 flex flex-wrap justify-center gap-6;
+    @apply z-50 flex w-full flex-col justify-center gap-6 lg:flex-row lg:flex-wrap;
   }
 
   .cardItemSurat {
-    @apply flex h-20 w-72 rounded bg-white p-2 shadow;
+    @apply flex h-20 w-full cursor-pointer items-center justify-between gap-2 rounded bg-white p-2 shadow lg:w-72;
   }
 }

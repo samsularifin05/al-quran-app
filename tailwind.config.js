@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        lpmq: ["lpmq", "lpmq"],
+      },
       backgroundColor: {
         color1: "#32B7C5",
         color2: "#624BC3",
@@ -18,6 +21,7 @@ export default {
         color3: "#747474",
         color4: "#007DFE",
         color5: "#32B7C5",
+        color6: "#828282",
       },
       borderColor: {
         color1: "#828282",

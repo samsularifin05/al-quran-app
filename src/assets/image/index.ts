@@ -17,8 +17,12 @@ import iconJuz from "./iconJuz.png";
 import halaman from "./halaman.png";
 import sortBy from "./sortBy.png";
 import IconStartSurat from "./IconStartSurat.png";
+import Iconmakiyyah from "./makiyyah.png";
+import IconBook from "./book.png";
 export {
   BG,
+  IconBook,
+  Iconmakiyyah,
   IconStartSurat,
   iconSurat,
   iconSerch,
