@@ -45,17 +45,21 @@ input.password-hide {
     position: absolute;
     background-image: url("./assets/image/bgHeader.png");
   }
-  .header-bg-mobile {
+  /* .header-bg-mobile {
     background-repeat: round;
-    /* width: 100vw; */
     height: 80vh;
     top: -100px;
     position: absolute;
     background-image: url("./assets/image/BG Mobile.png");
+  } */
+
+  .header-bg-mobile {
+    @apply absolute -top-[100px] h-[55vh] bg-color1 bg-cover bg-repeat-round md:h-[54vh];
+    background-image: url("./assets/image/BG Mobile.png");
   }
 
   .wrapperButtonseringDibaca {
-    @apply flex h-8 w-20 items-center justify-center rounded-full bg-color5 px-5 py-1 text-[12px] text-color2;
+    @apply flex h-8 w-20 cursor-pointer items-center justify-center rounded-full bg-color5 px-5 py-1 text-[12px] text-color2;
   }
 
   .cardSurat {
@@ -64,5 +68,12 @@ input.password-hide {
 
   .cardItemSurat {
     @apply flex h-20 w-full cursor-pointer items-center justify-between gap-2 rounded bg-white p-2 shadow lg:w-72;
+  }
+
+  .tabMenuActive {
+    @apply flex cursor-pointer items-center justify-center gap-1 rounded bg-color6 p-2 text-color2 lg:w-24;
+  }
+  .tabMenuNoActive {
+    @apply flex cursor-pointer items-center justify-center gap-2 rounded p-2 text-white outline outline-white;
   }
 }

@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, EyeClose, Facebook, Google, Mail } from "../../assets";
 import { FloatingLabelInput } from "../../components";
 import IntroComponent from "./component/IntroComponent";
 import FooterIntroComponent from "./component/footerIntroComponent";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex h-screen flex-col lg:flex-row">
       <IntroComponent />
@@ -27,7 +29,10 @@ const Login = () => {
             Lupa Password ?
           </Link>
 
-          <div className="flex w-full cursor-pointer items-center justify-between rounded bg-color1 p-2 px-4 text-white">
+          <div
+            onClick={() => navigate("/home")}
+            className="flex w-full cursor-pointer items-center justify-between rounded bg-color1 p-2 px-4 text-white"
+          >
             <div>Masuk</div>
             <img src={ArrowRight} className="h-5" />
           </div>
